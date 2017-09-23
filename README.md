@@ -16,3 +16,5 @@ To get the length of an array:
 
     int n = sizeof(arr) / sizeof(arr[0]);
 
+This assigns the sizeof the entire array divided by the sizeof a single element which is equal to the element count.
+Arrays are passed into functions as pointers so the sizeof returns the pointer size inside the function. So good practice is to pass in a seperate parameter of size_n
