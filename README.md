@@ -18,3 +18,18 @@ To get the length of an array:
 
 This assigns the sizeof the entire array divided by the sizeof a single element which is equal to the element count.
 Arrays are passed into functions as pointers so the sizeof returns the pointer size inside the function. So good practice is to pass in a seperate parameter of size_n
+
+
+**C Arrays**
+
+You cannot return an array from a C function. Arrays are not first class citizens in C. 
+Returning an array from a function decays to a pointer.
+
+Good practice does not advocate returning the address of a local variable to outside of the function. 
+
+it is possible too define the locally defined array variable as a static variable.
+ 
+it is possible allocate memory for an array and return a pointer remembering to free it.
+
+Derefrence a ptr to an array with the following syntax: `*(ptr + idx) `
+
